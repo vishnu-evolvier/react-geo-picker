@@ -18,14 +18,21 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-google-maps": "^9.4.5",
+    "react-map-gl": "^3.2.5",
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
     "nwb": "0.21.x",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
+    "react-map-gl": "^3.2.5",
+    "recompose": "^0.26.0"
   },
   "author": "",
   "homepage": "",
