@@ -6,7 +6,7 @@ import GoogleMapGeoPicker from '../../src/google-map';
 
 class Demo extends Component {
   state = {
-    location,
+    location: undefined,
   };
 
   onLocationChange = (location) => this.setState({ location });
