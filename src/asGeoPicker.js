@@ -71,7 +71,7 @@ export default ({ propNameMap } = {}) => compose(
       ...propNameMap,
     },
   }),
-  withState('location', 'setLocation'),
+  withState('location', 'setLocation', initialState),
   mapProps(propsMapper),
   withHandlers({ onLocationChange }),
   mapProps(propNameMapper),
