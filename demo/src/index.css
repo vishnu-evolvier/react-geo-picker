@@ -1,0 +1,14 @@
+.container {
+  padding: 0 20px;
+}
+
+.input {
+  width: 200px;
+}
+
+.input-control {
+  width: 400px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
