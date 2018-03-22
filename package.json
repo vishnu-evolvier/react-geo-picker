@@ -23,7 +23,9 @@
     "react": "16.x",
     "react-google-maps": "^9.4.5",
     "react-map-gl": "^3.2.5",
-    "recompose": "^0.26.0"
+    "react-redux": "^5.0.7",
+    "recompose": "^0.26.0",
+    "redux-form": "^7.3.0"
   },
   "devDependencies": {
     "nwb": "0.21.x",
@@ -31,7 +33,9 @@
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
     "react-map-gl": "^3.2.5",
-    "recompose": "^0.26.0"
+    "react-redux": "^5.0.7",
+    "recompose": "^0.26.0",
+    "redux-form": "^7.3.0"
   },
   "author": "",
   "homepage": "",
