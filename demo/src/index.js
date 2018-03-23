@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import store from './store';
 import BasicDemo from './demos/BasicDemo';
+import ReduxFormDemo from './demos/ReduxFormDemo';
 
 import './index.css';
 
@@ -25,6 +26,7 @@ render(
         <hr />
 
         <Route exact path="/" component={BasicDemo} />
+        <Route exact path="/redux-form" component={ReduxFormDemo} />
       </div>
     </BrowserRouter>
   </Provider>,
