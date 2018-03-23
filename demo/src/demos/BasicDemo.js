@@ -3,14 +3,13 @@ import React from 'react';
 import MapboxGeoPicker from '../../../src/mapbox';
 import GoogleMapGeoPicker from '../../../src/google-map';
 
+import { shanghai, googleMapApiKey, mapboxAccessToken } from '../constants';
+
 import './BasicDemo.css';
 
 class BasicDemo extends React.Component {
   state = {
-    location: {
-      latitude: 31.1094,
-      longitude: 121.4114,
-    },
+    location: shanghai,
   };
 
   onLocationChange = (location) => this.setState({
@@ -58,8 +57,8 @@ class BasicDemo extends React.Component {
             onChange={this.handleLongitudeChange}
           />
         </div>
-        <MapboxGeoPicker value={location} onChange={this.onLocationChange} />
-        <GoogleMapGeoPicker value={location} onChange={this.onLocationChange} />
+        <MapboxGeoPicker apiKey={mapboxAccessToken} value={location} onChange={this.onLocationChange} />
+        <GoogleMapGeoPicker apiKey={googleMapApiKey} value={location} onChange={this.onLocationChange} />
       </div>
     )
   }

@@ -6,9 +6,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import asGeoPicker from '../asGeoPicker';
 import MarkerSvg from '../components/MarkerSvg';
 
-const exampleAccessToken =
-  `pk.eyJ1Ijoic3VuZmVuZzMyIiwiYSI6ImNqZXRudjg5bTEya3Aydm8xbTByYXZ3czQifQ.hSIbG7jmA_ZVoM2t5jfJyA`;
-
 class MapboxGeoPicker extends Component {
   state = {
     viewport: {
@@ -31,7 +28,7 @@ class MapboxGeoPicker extends Component {
 
 
   render() {
-    const { width, height, location } = this.props;
+    const { width, height, location, apiKey } = this.props;
     const viewport = {
       ...this.state.viewport,
       ...location,
@@ -42,7 +39,7 @@ class MapboxGeoPicker extends Component {
         {...viewport}
         width={width}
         height={height}
-        mapboxApiAccessToken={exampleAccessToken}
+        mapboxApiAccessToken={apiKey}
         onViewportChange={this.onViewportChange}
       >
         <Marker

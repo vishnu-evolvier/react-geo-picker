@@ -6,17 +6,12 @@ import createGoogleMapGeoPicker from '../../../src/forms/redux-form/createGoogle
 
 import './BasicDemo.css';
 
+import { berkeley, googleMapApiKey, mapboxAccessToken } from '../constants';
+
 const formName = 'redux-form-demo';
 
 const MapboxGeoPicker = createMapboxGeoPicker({ formName });
 const GoogleMapGeoPicker = createGoogleMapGeoPicker({ formName });
-
-const berkeley = {
-  latitude: 37.871263,
-  longitude: -122.268783,
-};
-
-const googleMapApiKey = 'AIzaSyBAKdyEJFWvgX-ELU6DS0pu4-TX7Sk1xzU';
 
 class BasicDemo extends React.Component {
   render() {
@@ -47,7 +42,7 @@ class BasicDemo extends React.Component {
             max={180}
           />
         </div>
-        <MapboxGeoPicker defaultValue={berkeley} />
+        <MapboxGeoPicker apiKey={mapboxAccessToken} defaultValue={berkeley} />
         <GoogleMapGeoPicker apiKey={googleMapApiKey} />
       </div>
     )
