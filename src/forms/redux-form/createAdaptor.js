@@ -11,12 +11,19 @@ const createReduxFormAdaptor = ({
 
   const selector = formValueSelector(formName);
 
-  const locationMapper = state => ({
-    value: {
-      latitude: Number(selector(state, 'latitude')),
-      longitude: Number(selector(state, 'longitude')),
-    },
-  });
+  const locationMapper = state => {
+    const latitude = selector(state, 'latitude');
+    const longitude = selector(state, 'longitude');
+
+    if (!latitude || !longitude) return {};
+
+    return {
+      value: {
+        latitude: Number(latitude),
+        longitude: Number(longitude),
+      },
+    }
+  };
 
   const dispatchMapper = (dispatch) => {
     return {
