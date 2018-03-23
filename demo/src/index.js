@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 import store from './store';
 import BasicDemo from './demos/BasicDemo';
@@ -11,7 +11,7 @@ import './index.css';
 
 render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <div className="container">
         <h1>react-geo-picker</h1>
         <ul>
@@ -28,7 +28,7 @@ render(
         <Route exact path="/" component={BasicDemo} />
         <Route exact path="/redux-form" component={ReduxFormDemo} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.querySelector('#demo'),
 );
