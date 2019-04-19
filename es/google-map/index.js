@@ -83,12 +83,7 @@ var GoogleMapGeoPicker = function (_React$Component) {
         },
         onCenterChanged: this.handleCenterChanged
       },
-      React.createElement(Marker, { position: center }),
-      React.createElement('input', {
-        className: 'searchBox',
-        type: 'text',
-        placeholder: 'Type to Search'
-      })
+      React.createElement(Marker, { position: center })
     );
   };
 

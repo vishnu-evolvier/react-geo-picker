@@ -57,11 +57,6 @@ class GoogleMapGeoPicker extends React.Component {
         onCenterChanged={this.handleCenterChanged}
       >
         <Marker position={center} />
-          <input
-            className="searchBox"
-            type="text"
-            placeholder="Type to Search"
-          />
       </GoogleMap>
     )
   }
