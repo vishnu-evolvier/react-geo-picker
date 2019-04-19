@@ -1,5 +1,4 @@
 import React from "react";
-import SearchBox from 'react-google-maps/lib/components/places/SearchBox';
 
 import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
@@ -58,18 +57,11 @@ class GoogleMapGeoPicker extends React.Component {
         onCenterChanged={this.handleCenterChanged}
       >
         <Marker position={center} />
-        <SearchBox
-          ref={c => this.searchBox = c}
-          bounds={this.state.bounds}
-          controlPosition={google.maps.ControlPosition.TOP_LEFT}
-          onPlacesChanged={this.handlePlacesChanged}
-        >
           <input
             className="searchBox"
             type="text"
             placeholder="Type to Search"
           />
-        </SearchBox>
       </GoogleMap>
     )
   }
