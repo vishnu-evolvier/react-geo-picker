@@ -39,13 +39,14 @@ class GoogleMapGeoPicker extends React.Component {
 
   render() {
     const {
+      defaultZoom,
       defaultCenter,
       center = defaultCenter,
     } = this.props;
 
     return (
       <GoogleMap
-        defaultZoom={8}
+        defaultZoom={defaultZoom}
         defaultCenter={defaultCenter}
         defaultOptions={{
           mapTypeControl: false,
@@ -81,6 +82,7 @@ const defaultCenter = {
 
 GoogleMapGeoPicker.defaultProps = {
   defaultCenter,
+  defaultZoom: 8
 };
 
 const propsMapper = ({
